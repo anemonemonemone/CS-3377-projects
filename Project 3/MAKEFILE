@@ -1,0 +1,12 @@
+FLAGS = -Wall -Werror -std=gnu99 -pthread
+
+all: dbserver dbclient
+
+dbserver: dbserver.c
+	gcc dbserver.c -o dbserver $(FLAGS)
+
+dbclient: dbclient.c
+	gcc dbclient.c -o dbclient $(FLAGS)
+
+clean:
+	rm -f dbserver dbclient
